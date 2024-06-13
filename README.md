@@ -1,2 +1,2 @@
 # MyGrub
-FYP stuff
+This my FYP stuff. No touching! >:^0
