@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/textfield_style1"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:elevation="5dp"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/typeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/loading_label"
+        android:textColor="@color/ruby_red"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/descLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/typeLabel"
+        android:text="@string/desc_label"
+        android:textColor="@color/old_green"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/descDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descLabel"
+        android:layout_marginBottom="10dp"
+        android:background="@color/tea_green"
+        android:padding="10dp"
+        android:gravity="top"
+        android:text="@string/loading_label"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:overScrollMode="always"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false" />
+
+
+    <TextView
+        android:id="@+id/reportTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descDisplay"
+        android:text="@string/request_time_label"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/old_green"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/reportTimeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descDisplay"
+        android:layout_toEndOf="@id/reportTimeLabel"
+        android:text="@string/loading_label"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/dark_mint"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

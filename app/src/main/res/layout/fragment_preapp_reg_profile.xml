@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_lemon"
+    tools:context=".preapp.FragmentRegistrationProfile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:padding="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/myProfileMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:elegantTextHeight="true"
+                android:text="@string/my_profile_label"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilePic"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/myProfileMsg"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/header_icon_profile"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/addressCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profilePic"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="50dp"
+                    android:paddingBottom="50dp"
+                    android:paddingStart="50dp"
+                    >
+
+                    <ProgressBar
+                        android:id="@+id/loadingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:elevation="10dp"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/fnLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="@color/grey">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fnEdit"
+                            android:layout_width="250dp"
+                            android:layout_height="50dp"
+                            android:hint="@string/firstname_label" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lnLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fnLayout"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="@color/grey">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/lnEdit"
+                            android:layout_width="250dp"
+                            android:layout_height="50dp"
+                            android:hint="@string/lastname_label" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/bdLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lnLayout"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="@color/grey">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/bdEdit"
+                            android:layout_width="200dp"
+                            android:layout_height="50dp"
+                            android:focusable="false"
+                            android:hint="@string/birth_date_label" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/genderLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gender_label"
+                        android:layout_below="@id/bdLayout"
+                        android:textColor="@color/ashen_olive"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/genderSpinner"
+                        android:layout_below="@id/genderLabel"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"/>
+
+                    <TextView
+                        android:id="@+id/raceLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/race_label"
+                        android:layout_below="@id/genderSpinner"
+                        android:textColor="@color/ashen_olive"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/raceSpinner"
+                        android:layout_below="@id/raceLabel"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"/>
+
+                    <TextView
+                        android:id="@+id/religionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/religion_label"
+                        android:layout_below="@id/raceSpinner"
+                        android:textColor="@color/ashen_olive"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/religionSpinner"
+                        android:layout_below="@id/religionLabel"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"/>
+
+                    <RelativeLayout
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/religionSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/submitBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="25dp"
+                            android:background="@drawable/bg_gradient_dustygrass"
+                            android:text="@string/submit_label"
+                            android:textColor="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/backBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/submitBtn"
+                            android:background="@color/emerald_green"
+                            android:text="@string/back_label"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

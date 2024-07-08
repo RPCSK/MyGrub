@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/report_list_label"
+        android:textColor="@color/old_green"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/postType_Label"
+        android:textColor="@color/dark_sea_green"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/typeSpinner"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/title"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/type"
+        android:background="@color/white"
+        android:elevation="5dp" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/typeSpinner"
+        android:layout_marginBottom="5dp"
+        android:text="@string/postDesc_label"
+        android:textColor="@color/dark_sea_green"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/descET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/desc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:elevation="5dp"
+        android:ems="14"
+        android:gravity="top"
+        android:hint="@string/report_desc_label"
+        android:inputType="textMultiLine"
+        android:lines="6"
+        android:overScrollMode="always"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false" />
+
+
+</RelativeLayout>

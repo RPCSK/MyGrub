@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.home.food.FragmentHome">
+
+    <RelativeLayout
+        android:id="@+id/filterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/collapsibleToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/bright_red"
+            android:text="@string/minimise_label"/>
+
+        <RelativeLayout
+            android:id="@+id/buttonLayout"
+            android:layout_below="@id/collapsibleToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:elevation="10dp"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/applyBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@color/emerald_green"
+                android:text="@string/apply_label"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/clearBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/applyBtn"
+                android:background="@color/emerald_green"
+                android:text="@string/clear_label"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/resetBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/clearBtn"
+                android:background="@color/emerald_green"
+                android:backgroundTint="@color/bright_red"
+                android:text="@string/reset_label"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/halalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonLayout"
+            android:layout_marginBottom="5dp"
+            android:text="@string/halal_status_label"
+            android:textColor="@color/old_green"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/halalGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/halalLabel"
+            android:paddingEnd="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            app:singleSelection="true"
+            android:background="@drawable/chip_group_template"
+            android:elevation="5dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/halalChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/halal_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/nonHalalChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/non_halal_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/dietLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/halalGroup"
+            android:layout_marginBottom="5dp"
+            android:text="@string/diet_att_label"
+            android:textColor="@color/old_green"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/dietGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dietLabel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:paddingEnd="10dp"
+            android:background="@drawable/chip_group_template"
+            android:elevation="5dp"
+            app:chipSpacingVertical="0dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/glutenChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gluten_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/nonGlutenChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gluten_free_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/veganChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vegan_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/vegetarianChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vegetarian_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/lowSugarChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/low_sugar_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/unsweetenedChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unsweetened_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/lactoseChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lactose_free_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/noneChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/none_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/typeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dietGroup"
+            android:layout_marginBottom="5dp"
+            android:text="@string/food_type_label"
+            android:textColor="@color/old_green"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/typeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            android:layout_below="@id/typeLabel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/chip_group_template"
+            android:elevation="5dp"
+            app:chipSpacingVertical="0dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/instantChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/instant_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/noodleChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/noodles_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/meatChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/meat_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/veggieChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/veggies_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/fruitChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fruits_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/snackChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/snacks_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cookedChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cooked_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/beverageChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/beverage_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listingView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filterLayout"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:id="@+id/emptySearchLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/empty_filter_msg"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/emptyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/empty_list_msg"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</RelativeLayout>

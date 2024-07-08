@@ -1,0 +1,419 @@
+<resources>
+    <string name="app_name">MyGrub</string>
+
+    <string-array name="gender">
+        <item>Select</item>
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+
+    <string-array name="area">
+        <item>Select</item>
+        <item>Kapar</item>
+        <item>Klang</item>
+    </string-array>
+
+    <string-array name="services">
+        <item>Select</item>
+        <item>Clothing Aid</item>
+        <item>Daycare</item>
+        <item>Education</item>
+        <item>Food Aid</item>
+        <item>Financial Aid</item>
+        <item>Medical Aid</item>
+        <item>Shelter</item>
+    </string-array>
+
+    <string-array name="list_status">
+        <item>Select</item>
+        <item>Open</item>
+        <item>Close</item>
+    </string-array>
+
+    <string-array name="state">
+        <item>Select</item>
+        <item>Johor</item>
+        <item>Kedah</item>
+        <item>Kelantan</item>
+        <item>Melaka</item>
+        <item>Negeri Sembilan</item>
+        <item>Pahang</item>
+        <item>Perak</item>
+        <item>Perlis</item>
+        <item>Pulau Pinang</item>
+        <item>Sabah</item>
+        <item>Sarawak</item>
+        <item>Selangor</item>
+        <item>Terengganu</item>
+        <item>W.P. Kuala Lumpur</item>
+        <item>W.P. Labuan</item>
+        <item>W.P. Putrajaya</item>
+    </string-array>
+
+    <string-array name="nationality">
+        <item>Select</item>
+        <item>Malaysian</item>
+        <item>Non-Malaysian</item>
+    </string-array>
+
+    <string-array name="race">
+        <item>Select</item>
+        <item>Malay</item>
+        <item>Chinese</item>
+        <item>Indian</item>
+        <item>Indigenous</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="religion">
+        <item>Select</item>
+        <item>Islam</item>
+        <item>Buddhism</item>
+        <item>Hinduism</item>
+        <item>Christianity</item>
+        <item>Irreligious</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="marital">
+        <item>Select</item>
+        <item>Single</item>
+        <item>Married</item>
+        <item>Widow</item>
+        <item>Divorced</item>
+    </string-array>
+
+    <string-array name="oku">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="employment">
+        <item>Select</item>
+        <item>Full-time</item>
+        <item>Part-time</item>
+        <item>Self-employed</item>
+        <item>Gig Worker</item>
+        <item>Homemaker</item>
+        <item>Student</item>
+        <item>Unemployed</item>
+    </string-array>
+
+    <string-array name="employmentD">
+        <item>Select</item>
+        <item>Homemaker</item>
+        <item>Student</item>
+        <item>Unemployed</item>
+        <item>Retired</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="relationship">
+        <item>Select</item>
+        <item>Child</item>
+        <item>Spouse</item>
+        <item>Partner</item>
+        <item>Parent</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="eventType">
+        <item>Select</item>
+        <item>Charity Camp</item>
+        <item>Disaster Relief</item>
+        <item>Donation Drive</item>
+        <item>Free Program</item>
+        <item>Fundraiser</item>
+        <item>Volunteer Recruitment</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="reportType">
+        <item>Select</item>
+        <item>Irrelevant Content</item>
+        <item>Offensive Content</item>
+        <item>Spam</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="reportUType">
+        <item>Select</item>
+        <item>Fraud</item>
+        <item>Offensive Content</item>
+        <item>Spam</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="reportEType">
+        <item>Select</item>
+        <item>Fraudulent Content</item>
+        <item>Offensive Content</item>
+        <item>Spam</item>
+        <item>Others</item>
+    </string-array>
+
+    <!-- General Labels -->
+    <string name="login_label">Login</string>
+    <string name="register_label">Register</string>
+    <string name="signup_label">Sign up</string>
+    <string name="submit_label">Submit</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="done_label">Done</string>
+    <string name="verify_label">Verify</string>
+    <string name="edit_label">Edit</string>
+    <string name="back_label">Back</string>
+    <string name="add_label">Add</string>
+    <string name="yes_label">Yes</string>
+    <string name="no_label">No</string>
+    <string name="new_label">New</string>
+    <string name="apply_label">Apply</string>
+    <string name="clear_label">Clear</string>
+    <string name="reset_label">Reset</string>
+    <string name="delete_label">Delete</string>
+    <string name="approve_label">Approve</string>
+    <string name="reject_label">Reject</string>
+    <string name="expand_label">Expand</string>
+    <string name="requests_label">Requests</string>
+    <string name="remove_post_label">Remove Post</string>
+    <string name="strike_offender_label">Strike Offender</string>
+    <string name="strike_reporter_label">Strike Reporter</string>
+    <string name="dismiss_case_label">Dismiss Case</string>
+    <string name="minimise_label">Minimise</string>
+    <string name="charity_camp_label">Charity Camp</string>
+    <string name="disaster_relief_label">Disaster Relief</string>
+    <string name="donation_drive_label">Donation Drive</string>
+    <string name="free_program_label">Free Program</string>
+    <string name="fundraiser_label">Fundraiser</string>
+    <string name="volunteer_label">Volunteer Recruitment</string>
+    <string name="others_label">Others</string>
+    <string name="welfare_org_label">Welfare Organizations</string>
+    <string name="program_label">Welfare Programs/Aid</string>
+    <string name="requester_label">Requester</string>
+    <string name="message_label">Message</string>
+
+    <!-- Post labels -->
+    <string name="food_title_label">Food Title</string>
+    <string name="total_users_label">Total Users</string>
+    <string name="verify_request_label">Verification Requests</string>
+    <string name="active_reports_label">Active Reports</string>
+    <string name="top_contributors_label">Top Contributors</string>
+    <string name="users_label">Users</string>
+    <string name="listings_label">Listings</string>
+    <string name="by_label">By: </string>
+    <string name="postLoc_label">Location: </string>
+    <string name="contact_label">Contact Info </string>
+    <string name="postCont_label">Contact: </string>
+    <string name="postQuant_label">Quantity: </string>
+    <string name="dietary_label">Dietary</string>
+    <string name="health_label">Health</string>
+    <string name="type_label">Type</string>
+    <string name="event_type_label">Event Type</string>
+    <string name="postType_Label">Type:</string>
+    <string name="more_info_label">More Info</string>
+    <string name="title_label">Title</string>
+    <string name="postTag_label">Tags:</string>
+    <string name="question_label">Question:</string>
+    <string name="answer_2_label">Answer:</string>
+    <string name="postDesc_label">Description:</string>
+    <string name="postPeriod_label">Event Period:</string>
+    <string name="postEType_label">Event Type:</string>
+    <string name="postQR_label">QR:</string>
+    <string name="food_name_label">Item Name:</string>
+    <string name="unit_label">Unit (ex: kg, pcs)</string>
+    <string name="quantity_label">Quantity</string>
+    <string name="location_label">Location</string>
+    <string name="postReport_label">Report</string>
+    <string name="pick_up_loc_label">Pick-up Location</string>
+    <string name="event_loc_label">Event Location</string>
+    <string name="qr_label">QR Image</string>
+    <string name="add_qr_label">Add QR Image</string>
+    <string name="cancel_qr_label">Cancel QR Image</string>
+    <string name="restore_qr_label">Restore QR Image</string>
+
+    <string name="halal_status_label">Halal Status</string>
+    <string name="halal_label">Halal</string>
+    <string name="non_halal_label">Non-Halal</string>
+
+    <string name="diet_att_label">Dietary Attributes</string>
+    <string name="gluten_free_label">Gluten-free</string>
+    <string name="gluten_label">Gluten</string>
+    <string name="vegan_label">Vegan</string>
+    <string name="none_label">None</string>
+    <string name="vegetarian_label">Vegetarian</string>
+    <string name="low_sugar_label">Low-sugar</string>
+    <string name="unsweetened_label">Unsweetened</string>
+    <string name="lactose_free_label">Lactose-free</string>
+
+    <string name="food_type_label">Food Type</string>
+    <string name="instant_label">Instant</string>
+    <string name="noodles_label">Noodles</string>
+    <string name="meat_label">Meat</string>
+    <string name="veggies_label">Veggies</string>
+    <string name="fruits_label">Fruits</string>
+    <string name="snacks_label">Snacks</string>
+    <string name="cooked_label">Cooked Meal</string>
+    <string name="beverage_label">Beverage</string>
+
+    <string name="request_this_label">Request This</string>
+    <string name="start_date_label">Start Date</string>
+    <string name="end_date_label">End Date</string>
+
+    <!-- Menu strings -->
+    <string name="home_label">Home</string>
+    <string name="profile_label">Profile</string>
+    <string name="myPosts_label">My Posts</string>
+    <string name="myReports_label">My Reports</string>
+    <string name="myContributions_label">My Contributions</string>
+    <string name="settings_label">Settings</string>
+    <string name="events_label">Events</string>
+    <string name="change_email_label">CHANGE MY EMAIL ADDRESS</string>
+    <string name="change_password_label">CHANGE MY PASSWORD</string>
+    <string name="delete_acc_label">DELETE MY ACCOUNT</string>
+    <string name="faq_label">FAQ</string>
+    <string name="knowledge_base_label">Knowledge Base</string>
+    <string name="reports_label">Reports</string>
+    <string name="verifications_label">Verifications</string>
+    <string name="suspensions_label">Suspensions</string>
+    <string name="logout_label">Logout</string>
+    <string name="my_menu_label">My Menu</string>
+    <string name="my_tasks_label">My Tasks</string>
+    <string name="misc_label">Miscellaneous</string>
+    <string name="event_label">Charity Event</string>
+    <string name="welfare_label">My Welfare</string>
+    <string name="add_listing_label">Add Listing</string>
+    <string name="edit_listing_label">Edit Listing</string>
+    <string name="post_event_label">Add Event</string>
+    <string name="edit_event_label">Edit Event</string>
+    <string name="user_r_label">User Reports</string>
+    <string name="event_r_label">Event Reports</string>
+    <string name="list_r_label">Listing Reports</string>
+
+    <!-- Placeholder/hint strings -->
+    <string name="username_label">Username</string>
+    <string name="password_label">Password</string>
+    <string name="area_label">Area:</string>
+    <string name="service_label">Service:</string>
+    <string name="zero_label">0</string>
+    <string name="recommend_label">Recommend</string>
+    <string name="show_all_label">Show All (Eligible)</string>
+    <string name="show_every_label">Show All</string>
+    <string name="show_eli_label">Show Eligible Only</string>
+    <string name="show_non_label">Show Non-Eligible Only</string>
+    <string name="people_label">people!</string>
+    <string name="current_password_label">Current Password</string>
+    <string name="new_password_label">New Password</string>
+    <string name="confirm_password_label">Confirm Password</string>
+    <string name="email_label">Email</string>
+    <string name="all_users_label">All Users</string>
+    <string name="suspended_users_label">Suspended Users</string>
+    <string name="cur_email_label">Current Email</string>
+    <string name="new_email_label">New Email</string>
+    <string name="firstname_label">First Name</string>
+    <string name="lastname_label">Last Name</string>
+    <string name="birth_date_label">Birth Date</string>
+    <string name="verify_status_label">Verification Status</string>
+    <string name="gender_label">Gender</string>
+    <string name="oku_label">OKU</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="no_account_yet">No account yet? </string>
+    <string name="here">here</string>
+    <string name="on">on</string>
+    <string name="race_label">Race</string>
+    <string name="religion_label">Religion</string>
+    <string name="loading_label">Loading...</string>
+    <string name="exclamation">!</string>
+    <string name="question">\?</string>
+    <string name="section_name">Section Name</string>
+    <string name="town_label">Town</string>
+    <string name="merits_label">Merits:</string>
+    <string name="demerits_label">Demerits:</string>
+    <string name="searching_list_label">Searching for listings...</string>
+    <string name="searching_event_label">Searching for events...</string>
+    <string name="searching_org_label">Searching for Organizations...</string>
+    <string name="search_label">Search</string>
+    <string name="postcode_label">Postcode</string>
+    <string name="district_label">District</string>
+    <string name="relation_label">Relation</string>
+    <string name="comp_org_label">Organization (Company/School)</string>
+    <string name="nationality_label">Nationality</string>
+    <string name="income_label">Income (RM)</string>
+    <string name="marital_label">Marital Status</string>
+    <string name="employment_label">Employment Status</string>
+    <string name="address1_label">Address 1</string>
+    <string name="address2_label">Address 2 (Optional)</string>
+    <string name="state_label">State</string>
+    <string name="fulfilled_label">Fulfilled</string>
+    <string name="question_title_label">Question</string>
+    <string name="list_status_label">Listing Status</string>
+    <string name="answer_label">Answer</string>
+    <string name="posted_label">Posted</string>
+    <string name="asked_label">New Questions</string>
+    <string name="dependants_label">Dependants</string>
+    <string name="recommend_org_label">Recommendations (Org)</string>
+    <string name="recommend_aid_label">Recommendations (Aid)</string>
+    <string name="desc_label">Description</string>
+    <string name="report_desc_label">Report Description</string>
+    <string name="request_time_label">Request Time: </string>
+    <string name="request_msg_label">Give a message to the owner!</string>
+
+    <!-- Message strings -->
+    <string name="welcome_blank_label">Welcome, </string>
+    <string name="you_fulfilled">You have helped</string>
+    <string name="you_posted">You have posted</string>
+    <string name="you_spread">You have spread</string>
+    <string name="times_label">times!</string>
+    <string name="events_exc_label">events!</string>
+    <string name="you_safe">You have kept us \nsafe</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="login_page_label">Login Page</string>
+    <string name="empty_list_msg">There\'s currently no active listing! Try again later.</string>
+    <string name="empty_filter_msg">There\'s no match found!</string>
+    <string name="empty_list_post_msg">You haven\'t added your own listing!</string>
+    <string name="empty_event_post_msg">You haven\'t added your own event!</string>
+    <string name="empty_requests_post_msg">You don\'t have any requests right now!</string>
+    <string name="empty_event_msg">There\'s currently no active event! Try again later.</string>
+    <string name="empty_verity_msg">There\'s currently no active request!</string>
+    <string name="empty_user_rep_msg">There\'s currently no active user report!</string>
+    <string name="empty_list_rep_msg">There\'s currently no active listing report!</string>
+    <string name="empty_event_rep_msg">There\'s currently no active event report!</string>
+    <string name="empty_user_sus_msg">There\'s currently no registered users!</string>
+    <string name="empty_sus_user_msg">There\'s currently no suspended users!</string>
+    <string name="request_for_msg">There\'s a request for </string>
+    <string name="reject_sure">Are you sure you want to reject this request?</string>
+    <string name="fulfill_sure">Fulfilling the request means it will disappear from your list.
+        It is advisable to click this after the exchange is over. Proceed?</string>
+    <string name="registration_label">Registration</string>
+    <string name="report_list_label">Report This Listing</string>
+    <string name="report_event_label">Report This Event</string>
+    <string name="report_user_label">Report This User</string>
+    <string name="request_list_label">Request This Item</string>
+    <string name="edit_this_label">Edit This Item</string>
+    <string name="add_this_label">Add This Item</string>
+    <string name="ask_admin_label">Ask Admin!</string>
+    <string name="enter_q_label">Enter the question here</string>
+    <string name="enter_a_label">Enter the answer here</string>
+    <string name="add_dependant_label">Add Dependant</string>
+    <string name="add_item_label">Add Item</string>
+    <string name="edit_dependant_label">Edit Dependant</string>
+    <string name="fill_in_listing">Fill in the form (Listing)</string>
+    <string name="my_profile_label">My Profile</string>
+    <string name="no_dependants_msg">You don\'t have any dependants yet.\nWould you like to add one?</string>
+    <string name="indv_status_label">Individual Status</string>
+    <string name="additional_info_label">Additional Information</string>
+    <string name="employ_info_label">Employment Information</string>
+    <string name="ask_admin_msg">Can\'t find any answer to your question in the FAQ? Forward you inquiry to the admin!</string>
+    <string name="what_are_you_looking">What are you looking for?</string>
+    <string name="are_you_sure">Are you sure you want to delete </string>
+    <string name="suspend_the_user">Do you wish to suspend/ban the account belonging to </string>
+    <string name="unsuspend_the_user">Do you wish to unban the account belonging to </string>
+    <string name="verify_block">Your request will be sent to the administrator for approval. The result will be forwarded to your email. Proceed?</string>
+    <string name="delete_dependant_block">Are you sure you want to delete the dependant </string>
+    <string name="registration_block">There is still a bit information to fill out so we can better help you. But you may skip and save it for another time. Would you like to proceed or skip it?</string>
+    <string name="delete_account_block">All the data and progress associated with your account will be gone and it cannot be restored if you choose to delete this account. Are you sure you want to proceed with the account deletion?</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

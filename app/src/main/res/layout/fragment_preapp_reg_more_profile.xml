@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_lemon"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:padding="30dp"
+    tools:context=".preapp.FragmentRegistrationMoreProfile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/myProfileMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:elegantTextHeight="true"
+            android:text="@string/additional_info_label"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addressCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myProfileMsg"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="50dp"
+                android:paddingTop="50dp"
+                android:paddingBottom="50dp">
+
+                <ProgressBar
+                    android:id="@+id/loadingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:elevation="10dp"
+                    android:visibility="gone" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/address1Layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="@color/grey">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/address1Edit"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:hint="@string/address1_label" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/address2Layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address1Layout"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="@color/grey">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/address2Edit"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:hint="@string/address2_label" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/postcodeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address2Layout"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="@color/grey">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/postcodeEdit"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:hint="@string/postcode_label"
+                        android:inputType="number" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/townLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address2Layout"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@id/postcodeLayout"
+                    android:textColorHint="@color/grey">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/townEdit"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:hint="@string/town_label" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/stateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/townLayout"
+                    android:text="@string/state_label"
+                    android:textColor="@color/ashen_olive"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/stateSpinner"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/stateLabel"
+                    android:layout_marginBottom="10dp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/personalMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressCard"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:elegantTextHeight="true"
+            android:text="@string/indv_status_label"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/statusCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/personalMsg"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="50dp"
+                android:paddingTop="50dp"
+                android:paddingBottom="50dp">
+
+                <TextView
+                    android:id="@+id/nationalityLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nationality_label"
+                    android:textColor="@color/ashen_olive"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/nationalitySpinner"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/nationalityLabel"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/maritalLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nationalitySpinner"
+                    android:text="@string/marital_label"
+                    android:textColor="@color/ashen_olive"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/maritalSpinner"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/maritalLabel"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/okuLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/maritalSpinner"
+                    android:text="@string/oku_label"
+                    android:textColor="@color/ashen_olive"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/okuSpinner"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/okuLabel"
+                    android:layout_marginBottom="10dp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/employmentMSg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/statusCard"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:elegantTextHeight="true"
+            android:text="@string/employ_info_label"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/employmentCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/employmentMSg"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="50dp"
+                android:paddingTop="50dp"
+                android:paddingBottom="50dp">
+
+                <TextView
+                    android:id="@+id/employLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/employment_label"
+                    android:textColor="@color/ashen_olive"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/employmentSpinner"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/employLabel"
+                    android:layout_marginBottom="10dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/orgLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/employmentSpinner"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="@color/grey">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/orgEdit"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:hint="@string/comp_org_label" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/incomeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/orgLayout"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="@color/grey">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/incomeEdit"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:hint="@string/income_label"
+                        android:inputType="number" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/incomeLayout"
+                    android:layout_centerHorizontal="true">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/submitBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="25dp"
+                        android:background="@drawable/bg_gradient_dustygrass"
+                        android:text="@string/submit_label"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/backBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/submitBtn"
+                        android:background="@color/emerald_green"
+                        android:text="@string/back_label"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>

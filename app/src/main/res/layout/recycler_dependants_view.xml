@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/textfield_style1"
+    android:layout_marginBottom="20dp"
+    android:elevation="5dp"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/picLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/header_icon_profile"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="2dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/editBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profileImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/emerald_green"
+                android:text="@string/edit_label"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/deleteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editBtn"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/bright_red"
+                android:text="@string/delete_label"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/firstNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/picLayout"
+            android:text="@string/firstname_label"
+            android:textColor="@color/old_green"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/firstNameET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstNameLabel"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/picLayout"
+            android:background="@color/white"
+            android:enabled="false"
+            android:text="@string/loading_label"
+            android:textColor="@color/dark_sea_green"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lastNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstNameET"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/picLayout"
+            android:text="@string/lastname_label"
+            android:textColor="@color/old_green"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/lastNameET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lastNameLabel"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/picLayout"
+            android:background="@color/white"
+            android:enabled="false"
+            android:text="@string/loading_label"
+            android:textColor="@color/dark_sea_green"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/birthdateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lastNameET"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/picLayout"
+            android:text="@string/birth_date_label"
+            android:textColor="@color/old_green"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/birthdateET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/birthdateLabel"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/picLayout"
+            android:background="@color/white"
+            android:enabled="false"
+            android:focusable="false"
+            android:text="@string/loading_label"
+            android:textColor="@color/dark_sea_green"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/relationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/birthdateET"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/picLayout"
+            android:text="@string/relation_label"
+            android:textColor="@color/old_green"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/relationET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relationLabel"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/picLayout"
+            android:background="@color/white"
+            android:text="@string/loading_label"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/employmentLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relationET"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/picLayout"
+            android:text="@string/employment_label"
+            android:textColor="@color/old_green"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/employmentET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/employmentLabel"
+            android:layout_toEndOf="@id/picLayout"
+            android:background="@color/white"
+            android:text="@string/loading_label"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

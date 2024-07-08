@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:elevation="5dp"
+    android:background="@drawable/textfield_style1"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/orgImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:background="@color/grey"
+        android:scaleType="centerCrop"
+        android:src="@drawable/form_icon_image" />
+
+    <RelativeLayout
+        android:layout_below="@id/orgTitle"
+        android:layout_toEndOf="@id/orgImage"
+        android:layout_width="match_parent"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/locationIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/rec_icon_location"/>
+
+        <TextView
+            android:id="@+id/locationDetail"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/locationIcon"
+            android:text="@string/loading_label"/>
+
+        <ImageView
+            android:id="@+id/contactIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/locationDetail"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/rec_icon_contact"/>
+
+        <TextView
+            android:id="@+id/contactDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/locationDetail"
+            android:layout_toEndOf="@id/contactIcon"
+            android:text="@string/loading_label"/>
+
+        <ImageView
+            android:id="@+id/webIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contactDetail"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/rec_icon_link"/>
+
+        <TextView
+            android:id="@+id/webDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contactDetail"
+            android:layout_toEndOf="@id/webIcon"
+            android:text="@string/loading_label"/>
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/orgTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/orgImage"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/title_label"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+</RelativeLayout>

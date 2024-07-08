@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_dustygrass"
+    android:fillViewport="true"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    tools:context=".user.profile.FragmentProfile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/loadingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:elevation="10dp"
+            android:visibility="gone" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mainCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/header_icon_profile"
+                    app:civ_border_color="@color/black"
+                    app:civ_border_width="2dp" />
+
+                <TextView
+                    android:id="@+id/firstNameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/editMainCardLabel"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@id/profileImage"
+                    android:text="@string/firstname_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/doneEditMainCardLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/editMainCardLabel"
+                    android:visibility="gone"
+                    android:text="@string/done_label"
+                    android:textColor="@color/bright_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/editMainCardLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/edit_label"
+                    android:textColor="@color/bright_blue"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/firstNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/firstNameLabel"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/profileImage"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:text="@string/loading_label"
+                    android:textColor="@color/dark_sea_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lastNameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/firstNameET"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@id/profileImage"
+                    android:text="@string/lastname_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/lastNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lastNameLabel"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/profileImage"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:text="@string/loading_label"
+                    android:textColor="@color/dark_sea_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/genderLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lastNameET"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@id/profileImage"
+                    android:text="@string/gender_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/genderSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/genderLabel"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/profileImage"
+                    android:background="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/raceLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/genderSpinner"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/race_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+
+                <Spinner
+                    android:id="@+id/raceSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/religionLabel"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:text="@string/loading_label"
+                    android:textColor="@color/dark_sea_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/religionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/genderSpinner"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@id/profileImage"
+                    android:text="@string/religion_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/religionSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/religionLabel"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/profileImage"
+                    android:background="@color/white"
+                    android:text="@string/loading_label"
+                    android:textColor="@color/dark_sea_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/birthdateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/raceSpinner"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/birth_date_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/birthdateET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/birthdateLabel"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:text="@string/loading_label"
+                    android:textColor="@color/dark_sea_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nationalityLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/religionSpinner"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@id/profileImage"
+                    android:text="@string/nationality_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/nationalitySpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/birthdateLabel"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/profileImage"
+                    android:background="@color/white"
+                    android:text="@string/loading_label"
+                    android:textColor="@color/dark_sea_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/maritalLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/birthdateET"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/marital_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/maritalSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/maritalLabel"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:textColor="@color/dark_sea_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/okuLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nationalitySpinner"
+                    android:layout_toEndOf="@id/profileImage"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/oku_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/okuSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/okuLabel"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/profileImage"
+                    android:background="@color/white"
+                    android:textColor="@color/dark_sea_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/verifyLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/maritalSpinner"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/verify_status_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/verifyDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/verifyLabel"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:text="@string/loading_label"
+                    android:textColor="@color/dark_sea_green"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/verifyBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/tag_style1"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/okuSpinner"
+                    android:textColor="@color/white"
+                    android:text="@string/verify_label"/>
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/secondCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mainCard"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/address1Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/editSecondCardLabel"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/address1_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/doneEditSecondCardLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/editSecondCardLabel"
+                    android:visibility="gone"
+                    android:text="@string/done_label"
+                    android:textColor="@color/bright_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/editSecondCardLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/edit_label"
+                    android:textColor="@color/bright_blue"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/address1ET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address1Label"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:text="@string/loading_label"
+                    android:textColor="@color/dark_sea_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/address2Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address1ET"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/address2_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/address2ET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address2Label"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:text="@string/loading_label"
+                    android:textColor="@color/dark_sea_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/postcodeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address2ET"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/postcode_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/postcodeET"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/postcodeLabel"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:text="@string/loading_label"
+                    android:textColor="@color/dark_sea_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/townLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address2ET"
+                    android:layout_toEndOf="@id/postcodeET"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/town_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/townET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/townLabel"
+                    android:layout_toEndOf="@id/postcodeET"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:text="@string/loading_label"
+                    android:textColor="@color/dark_sea_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/stateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/postcodeET"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/state_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/stateSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stateLabel"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/thirdCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondCard"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/doneEditThirdCardLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/editThirdCardLabel"
+                    android:visibility="gone"
+                    android:text="@string/done_label"
+                    android:textColor="@color/bright_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/editThirdCardLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/edit_label"
+                    android:textColor="@color/bright_blue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/employmentLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/editThirdCardLabel"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/employment_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/employmentSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/employmentLabel"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:textColor="@color/dark_sea_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/organizationLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/employmentSpinner"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/comp_org_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/organizationET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/organizationLabel"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:text="@string/loading_label"
+                    android:textColor="@color/dark_sea_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/incomeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/organizationET"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/income_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/incomeET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/incomeLabel"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:text="@string/loading_label"
+                    android:textColor="@color/dark_sea_green"
+                    android:inputType="number"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</ScrollView>

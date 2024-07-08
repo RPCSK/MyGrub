@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyGrub"
+        tools:targetApi="31">
+        <activity
+            android:name=".admin.knowledge.KnowledgeMain"
+            android:exported="false" />
+        <activity
+            android:name=".admin.faq.FAQAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".user.home.welfare.OrgList"
+            android:exported="false" />
+        <activity
+            android:name=".user.home.welfare.AidList"
+            android:exported="false" />
+        <activity
+            android:name=".user.home.welfare.OrgMain"
+            android:exported="false" />
+        <activity
+            android:name=".user.contribution.ContributionMain"
+            android:exported="false" />
+        <activity
+            android:name=".admin.reports.users.UserReportDetails"
+            android:exported="false" />
+        <activity
+            android:name=".user.posts.RequestDetail"
+            android:exported="false" />
+        <activity
+            android:name=".admin.suspensions.SuspensionsMain"
+            android:exported="false" />
+        <activity
+            android:name=".admin.reports.events.EventReportDetails"
+            android:exported="false" />
+        <activity
+            android:name=".admin.reports.lists.ListReportDetails"
+            android:exported="false" />
+        <activity
+            android:name=".admin.reports.ReportMain"
+            android:exported="false" />
+        <activity
+            android:name=".admin.verifications.VerificationMain"
+            android:exported="false" />
+        <activity
+            android:name=".user.posts.EventEditForm"
+            android:exported="false" />
+        <activity
+            android:name=".user.posts.ListEditForm"
+            android:exported="false" />
+        <activity
+            android:name=".user.posts.MyPostsMain"
+            android:exported="false" />
+        <activity
+            android:name=".user.faq.FAQMain"
+            android:exported="false" />
+        <activity
+            android:name=".user.profile.ProfileMain"
+            android:exported="false" />
+        <activity
+            android:name=".user.home.event.EventEntryForm"
+            android:exported="false" />
+        <activity
+            android:name=".admin.settings.ChangePassA"
+            android:exported="false" />
+        <activity
+            android:name=".user.settings.DeleteAcc"
+            android:exported="false" />
+        <activity
+            android:name=".user.settings.ChangePass"
+            android:exported="false" />
+        <activity
+            android:name=".user.settings.ChangeEmail"
+            android:exported="false" />
+        <activity
+            android:name=".user.settings.Settings"
+            android:exported="false" />
+        <activity
+            android:name=".preapp.ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".user.home.food.ListEntryForm"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminMainPage"
+            android:exported="false" />
+        <activity
+            android:name=".preapp.Register"
+            android:exported="false" />
+        <activity
+            android:name=".preapp.Login"
+            android:exported="false" />
+        <activity
+            android:name=".user.home.event.EventDetails"
+            android:exported="false" />
+        <activity
+            android:name=".user.home.food.FoodDetails"
+            android:exported="false" />
+        <activity
+            android:name=".user.UserMainPage"
+            android:exported="false" />
+        <activity
+            android:name=".preapp.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

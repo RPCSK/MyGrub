@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/textfield_style1"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:elevation="5dp"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/loading_label"
+        android:textColor="@color/old_green"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/requestTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailLabel"
+        android:text="@string/request_time_label"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/dark_mint"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/requestTimeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailLabel"
+        android:layout_toEndOf="@id/requestTimeLabel"
+        android:text="@string/loading_label"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/dark_mint"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/requestTimeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/approveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/approve_label"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/emerald_green"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/rejectBtn"
+            android:layout_toEndOf="@id/approveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reject_label"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/bright_red"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

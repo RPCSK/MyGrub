@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/textfield_style1"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:elevation="5dp"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/questionLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/new_label"
+        android:textColor="@color/dusk_orange"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/questionDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/questionLabel"
+        android:text="@string/loading_label"
+        android:singleLine="true"
+        android:textColor="@color/dark_mint"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

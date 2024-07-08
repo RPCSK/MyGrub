@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.home.event.FragmentEvent">
+
+    <RelativeLayout
+        android:id="@+id/filterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/collapsibleToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/minimise_label"
+            android:textColor="@color/bright_red"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/buttonLayout"
+            android:layout_below="@id/collapsibleToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:elevation="10dp"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/applyBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@color/emerald_green"
+                android:text="@string/apply_label"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/clearBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/applyBtn"
+                android:background="@color/emerald_green"
+                android:text="@string/clear_label"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/resetBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/clearBtn"
+                android:background="@color/emerald_green"
+                android:backgroundTint="@color/bright_red"
+                android:text="@string/reset_label"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/typeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonLayout"
+            android:layout_marginBottom="5dp"
+            android:text="@string/event_type_label"
+            android:textColor="@color/old_green"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/typeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/typeLabel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/chip_group_template"
+            android:elevation="5dp"
+            android:paddingEnd="10dp"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/charityChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/charity_camp_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/donationChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/donation_drive_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/disasterChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/disaster_relief_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/freeProgChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/free_program_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/fundraiserChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fundraiser_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/volunteerChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/volunteer_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/othersChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/others_label"
+                android:textColor="@color/chip_txt"
+                app:chipBackgroundColor="@color/chip_bg" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/eventView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filterLayout" />
+
+    <TextView
+        android:id="@+id/emptySearchLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/empty_filter_msg"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/emptyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/empty_event_msg"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_pinksun"
+    tools:context=".admin.reports.lists.ListReportDetails">
+
+    <ProgressBar
+        android:id="@+id/loadingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:elevation="10dp"/>
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/reportPanelLayout"
+                android:padding="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/typeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/loading_label"
+                    android:textColor="@color/ruby_red"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/descLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/typeLabel"
+                    android:text="@string/desc_label"
+                    android:textColor="@color/old_green"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/descDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/descLabel"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/tea_green"
+                    android:padding="10dp"
+                    android:gravity="top"
+                    android:text="@string/loading_label"
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="false" />
+
+                <RelativeLayout
+                    android:id="@+id/buttonLayout"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/descDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/removeBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:backgroundTint="@color/emerald_green"
+                        android:text="@string/remove_post_label"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/strikeOBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@id/removeBtn"
+                        android:backgroundTint="@color/bright_blue"
+                        android:text="@string/strike_offender_label"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/strikeRBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/strikeOBtn"
+                        android:layout_marginEnd="10dp"
+                        android:backgroundTint="@color/tiramisu_orange"
+                        android:text="@string/strike_reporter_label"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/dismissBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/strikeOBtn"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@id/strikeRBtn"
+                        android:backgroundTint="@color/bright_red"
+                        android:text="@string/dismiss_case_label"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reportPanelLayout"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="10dp"
+                    android:paddingStart="40dp"
+                    android:paddingTop="30dp"
+                    android:paddingEnd="40dp"
+                    android:paddingBottom="30dp">
+
+                    <ImageView
+                        android:id="@+id/detailImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/grey"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/form_icon_image" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/detailImg"
+                        android:background="@drawable/textfield_style1"
+                        android:text="@string/loading_label"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/by"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title"
+                        android:text="@string/by_label"
+                        android:textAlignment="center"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/by"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/white"
+                        android:text="@string/loading_label"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/username"
+                        android:text="@string/postLoc_label"
+                        android:textColor="@color/old_green"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/locationDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/location"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/textfield_style1"
+                        android:text="@string/loading_label" />
+
+                    <TextView
+                        android:id="@+id/quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/locationDetail"
+                        android:text="@string/postQuant_label"
+                        android:textColor="@color/old_green"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/quantityDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/quantity"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/textfield_style1"
+                        android:text="@string/loading_label" />
+
+                    <TextView
+                        android:id="@+id/tags"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/quantityDetail"
+                        android:text="@string/postTag_label"
+                        android:textColor="@color/old_green"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tags"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/white"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp"
+                        app:chipSpacingVertical="0dp">
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <TextView
+                        android:id="@+id/desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chipGroup"
+                        android:text="@string/postDesc_label"
+                        android:textColor="@color/old_green"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/itemDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/desc"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/textfield_style1"
+                        android:hint="@string/loading_label"
+                        android:inputType="textMultiLine"
+                        android:lines="6"
+                        android:overScrollMode="always"
+                        android:padding="10dp"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:scrollHorizontally="false" />
+
+                    <TextView
+                        android:id="@+id/contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/itemDesc"
+                        android:text="@string/postCont_label"
+                        android:textColor="@color/old_green"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/contactDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/contact"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/textfield_style1"
+                        android:text="@string/loading_label" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

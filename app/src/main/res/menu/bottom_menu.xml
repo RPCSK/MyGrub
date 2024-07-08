@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <item
+            android:id="@+id/bottom_home"
+            android:icon="@drawable/drawer_icon_home"
+            android:title="@string/home_label" />
+        <item
+            android:id="@+id/bottom_event"
+            android:icon="@drawable/bottom_nav_icon_event"
+            android:title="@string/event_label" />
+        <item
+            android:id="@+id/bottom_welfare"
+            android:icon="@drawable/bottom_nav_icon_welfare"
+            android:title="@string/welfare_label" />
+
+</menu>

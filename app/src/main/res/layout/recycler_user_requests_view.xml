@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:elevation="5dp"
+    android:background="@drawable/textfield_style1"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/listImage"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:background="@color/grey"
+        android:scaleType="centerCrop"
+        android:src="@drawable/form_icon_image" />
+
+    <RelativeLayout
+        android:id="@+id/requestLayout"
+        android:layout_toEndOf="@id/listImage"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/listMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/request_for_msg"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/listTitle"
+            android:layout_below="@id/listMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/emerald_green"
+            android:text="@string/loading_label"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/on"
+            android:layout_below="@id/listTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/on"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/requestTime"
+            android:layout_below="@id/on"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/old_green"
+            android:text="@string/loading_label"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

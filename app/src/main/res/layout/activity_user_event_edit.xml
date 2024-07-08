@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_dustygrass"
+    tools:context=".user.posts.EventEditForm">
+
+    <ProgressBar
+        android:id="@+id/loadingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:elevation="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp">
+
+                <TextView
+                    android:id="@+id/formTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/edit_event_label"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/eventImage"
+                    android:layout_width="250dp"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/formTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/grey"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/form_icon_image" />
+
+                <EditText
+                    android:id="@+id/titleET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/eventImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/textfield_style1"
+                    android:elevation="5dp"
+                    android:ems="14"
+                    android:hint="@string/title_label"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/startDateET"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/titleET"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/textfield_style1"
+                    android:elevation="5dp"
+                    android:hint="@string/start_date_label"
+                    android:editable="false"
+                    android:inputType="none" />
+
+                <EditText
+                    android:id="@+id/endDateET"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/titleET"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@id/startDateET"
+                    android:background="@drawable/textfield_style1"
+                    android:elevation="5dp"
+                    android:ems="10"
+                    android:hint="@string/end_date_label"
+                    android:editable="false"
+                    android:inputType="none" />
+
+                <TextView
+                    android:id="@+id/typeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/startDateET"
+                    android:text="@string/event_type_label"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/ashen_olive"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/typeSpinner"
+                    android:layout_width="290dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/typeLabel"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/textfield_style1"
+                    android:elevation="5dp" />
+
+                <EditText
+                    android:id="@+id/descET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/typeSpinner"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/textfield_style1"
+                    android:elevation="5dp"
+                    android:ems="14"
+                    android:gravity="top"
+                    android:hint="@string/desc_label"
+                    android:inputType="textMultiLine"
+                    android:lines="6"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="false" />
+
+                <TextView
+                    android:id="@+id/addCancelQr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_qr_label"
+                    android:layout_below="@id/descET"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/bright_blue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/restoreQR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/restore_qr_label"
+                    android:layout_below="@id/descET"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="gone"
+                    android:textColor="@color/bright_green"
+                    android:layout_alignParentRight="true"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/qrLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/addCancelQr"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/qrLabel"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/qr_label"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/ashen_olive"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/qrImage"
+                        android:visibility="gone"
+                        android:layout_width="250dp"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/qrLabel"
+                        android:layout_centerHorizontal="true"
+                        android:adjustViewBounds="true"
+                        android:background="@color/grey"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/form_icon_image" />
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/contactET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/qrLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/textfield_style1"
+                    android:elevation="5dp"
+                    android:ems="14"
+                    android:hint="@string/contact_label"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/locationET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/contactET"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/textfield_style1"
+                    android:elevation="5dp"
+                    android:ems="14"
+                    android:hint="@string/event_loc_label"
+                    android:inputType="text" />
+
+                <RelativeLayout
+                    android:id="@+id/buttonLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/locationET"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="10dp"
+                    android:padding="5dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/updateBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/emerald_green"
+                        android:text="@string/common_google_play_services_update_button"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/cancelBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/updateBtn"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/emerald_green"
+                        android:text="@string/cancel_label"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/deleteBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/cancelBtn"
+                        android:background="@color/emerald_green"
+                        android:backgroundTint="@color/bright_red"
+                        android:text="@string/delete_label"
+                        android:textColor="@color/white" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+</RelativeLayout>

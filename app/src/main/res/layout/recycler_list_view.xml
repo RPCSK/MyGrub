@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:elevation="5dp"
+    android:background="@drawable/textfield_style1"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/listImage"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:background="@color/grey"
+        android:scaleType="centerCrop"
+        android:src="@drawable/form_icon_image" />
+
+    <TextView
+        android:id="@+id/listTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/listImage"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/title_label"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/usernameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listTitle"
+        android:layout_toEndOf="@id/listImage"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/listBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/by_label"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/listUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/listBy"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/username_label"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/locationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameLayout"
+        android:layout_toEndOf="@id/listImage"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/listLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/postLoc_label"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/listLocDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/listLocation"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/location_label"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/chipLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/locationLayout"
+        android:layout_marginStart="20dp"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp"
+        android:layout_toEndOf="@id/listImage"
+        android:background="@color/white"
+        app:chipSpacingVertical="2dp">
+
+        <TextView
+            android:id="@+id/listChip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/none_label"
+            android:textSize="13sp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/tag_style1"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/listChip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/listChip1"
+            android:text="@string/none_label"
+            android:textSize="13sp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/tag_style1"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/listChip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/listChip1"
+            android:layout_marginTop="10dp"
+            android:text="@string/none_label"
+            android:textSize="13sp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/tag_style1"
+            android:textColor="@color/white"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/bg_gradient_pinksun"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.reports.ReportMain">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main" />
+
+    <RelativeLayout
+        android:id="@+id/switchLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="20dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/userBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="@string/users_label"
+            android:textColor="@color/tiramisu_orange" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/listingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/userBtn"
+            android:backgroundTint="@color/grey"
+            android:text="@string/listings_label"
+            android:textColor="@color/warm_orange_brown" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/eventBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/listingBtn"
+            android:backgroundTint="@color/grey"
+            android:textColor="@color/warm_orange_brown"
+            android:text="@string/events_label" />
+
+    </RelativeLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentReportsContainer"
+        android:name="com.example.mygrub.admin.reports.users.FragmentUserReport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/switchLayout" />
+
+</RelativeLayout>

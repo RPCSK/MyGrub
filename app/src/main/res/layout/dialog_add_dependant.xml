@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/add_dependant_label"
+        android:textColor="@color/old_green"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/firstNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/firstname_label"
+        android:textColor="@color/dark_sea_green"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/firstNameET"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/title"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:hint="@string/firstname_label"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/lastNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firstNameET"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/lastname_label"
+        android:textColor="@color/dark_sea_green"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/lastNameET"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/firstNameET"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:hint="@string/lastname_label"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/birthdateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lastNameET"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/birth_date_label"
+        android:textColor="@color/dark_sea_green"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/birthdateET"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/lastNameET"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:focusable="false"
+        android:hint="@string/birth_date_label"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/relationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/birthdateET"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/relation_label"
+        android:textColor="@color/dark_sea_green"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/relationSpinner"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/birthdateET"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/employmentLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relationSpinner"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/employment_label"
+        android:textColor="@color/dark_sea_green"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/employmentSpinner"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/relationSpinner"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:padding="10dp" />
+
+
+</RelativeLayout>

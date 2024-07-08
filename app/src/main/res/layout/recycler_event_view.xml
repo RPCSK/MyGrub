@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:background="@drawable/textfield_style1"
+    android:elevation="5dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingStart="45dp"
+    android:paddingEnd="45dp">
+
+    <TextView
+        android:id="@+id/eventTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/loading_label"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/eventImage"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/eventTitle"
+        android:layout_centerHorizontal="true"
+        android:background="@color/grey"
+        android:layout_marginBottom="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/form_icon_image" />
+
+    <TextView
+        android:id="@+id/eventDates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eventImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:text="@string/loading_label"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/typeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eventDates"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/old_green"
+        android:text="@string/postType_Label"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/eventType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eventDates"
+        android:layout_toEndOf="@id/typeLabel"
+        android:text="@string/loading_label" />
+
+    <TextView
+        android:id="@+id/locationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/typeLabel"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/old_green"
+        android:text="@string/postLoc_label"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/eventLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_below="@id/typeLabel"
+        android:layout_toEndOf="@id/locationLabel"
+        android:text="@string/loading_label" />
+
+    <TextView
+        android:id="@+id/moreInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/more_info_label"
+        android:textStyle="bold"
+        android:textColor="@color/emerald_green"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
+
+</RelativeLayout>
